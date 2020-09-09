@@ -1,5 +1,6 @@
 // Colours
-$label-colour: #ccc;
+$label-colour: #bbb;
+$disabled-colour: #ddd;
 $toggle-colour: #2F855A;
 $white: #fff;
 
@@ -52,10 +53,10 @@ $white: #fff;
     }
   }
   &-disabled {
-    background-color: $label-colour;
+    background-color: $disabled-colour !important;
     cursor: not-allowed;
     &:before {
-      background-color: $label-colour;
+      background-color: $disabled-colour !important;
       cursor: not-allowed;
     }
   }
