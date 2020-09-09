@@ -8,7 +8,7 @@ Note: id is required for ToggleSwitch component to function. Name, currentValue,
 Usage: <ToggleSwitch id="id" onChange={function (e) { console.log("Checkbox Current State: " + e.target.checked); }} />
 */
 
-const ToggleSwitch = ({ id, name, value, onSwitch, optionLabels, small, disabled }) => {
+const ToggleSwitch = ({ id, name, value, defaultChecked, onSwitch, optionLabels, small, disabled }) => {
 
   const onChange = e => {
     if (typeof onSwitch === "function") onSwitch(e.target.checked);
@@ -16,15 +16,16 @@ const ToggleSwitch = ({ id, name, value, onSwitch, optionLabels, small, disabled
 
   return (
       <div className={"toggle-switch" + (small ? " small-switch" : "")}>
-        <input
-          type="checkbox"
-          name={name}
-          className="toggle-switch-checkbox"
-          id={id}
-          checked={value}
-          value={value}
-          onChange={onChange}
-          disabled={disabled}
+      <input
+        type="checkbox"
+        name={name}
+        className="toggle-switch-checkbox"
+        id={id}
+        checked={value}
+        defaultChecked={defaultChecked}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
         />
         {id ? (
           <label className="toggle-switch-label" htmlFor={id}>
@@ -52,8 +53,8 @@ const ToggleSwitch = ({ id, name, value, onSwitch, optionLabels, small, disabled
 
 // Set optionLabels for rendering.
 ToggleSwitch.defaultProps = {
-    optionLabels: ["Yes", "No"]
-  };
+  optionLabels: ["Yes", "No"],
+};
 
 ToggleSwitch.propTypes = {
   id: PropTypes.string.isRequired,
