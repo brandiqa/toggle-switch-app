@@ -4,8 +4,8 @@ import './ToggleSwitch.scss';
 
 /*
 Toggle Switch Component
-Note: id is required for ToggleSwitch component to function. Name, currentValue, value, Small and onChange are optional.
-Usage: <ToggleSwitch id="id" onChange={function (e) { console.log("Checkbox Current State: " + e.target.checked); }} />
+Note: id is required for ToggleSwitch component to function. The props name, value, small and onSwitch are optional.
+Usage: <ToggleSwitch id="id" onSwitch={function (checked) { console.log("Checkbox Current State: " + checked); }} />
 */
 
 const ToggleSwitch = ({ id, name, value, defaultChecked, onSwitch, optionLabels, small, disabled }) => {

@@ -7,9 +7,9 @@ export default function NewsletterStates() {
   let [weekly, setWeekly] = useState(false);
   let [monthly, setMonthly] = useState(false);
 
-  const onNewsletterChange = (value) => {
-    setNewsletter(value);
-    if (!value) {
+  const onNewsletterChange = (checked) => {
+    setNewsletter(checked);
+    if (!checked) {
       setDaily(false);
       setWeekly(false);
       setMonthly(false);
