@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToggleSwitch from '../components/ToggleSwitch';
 
-export default function () {
+export default function NewsletterStates() {
   let [newsletter, setNewsletter] = useState(false);
   let [daily, setDaily] = useState(false);
   let [weekly, setWeekly] = useState(false);

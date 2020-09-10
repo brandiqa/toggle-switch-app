@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
 
-// import NewsletterStates from './containers/NewsletterStates';
-import NewsletterForm from './containers/NewsletterForm';
+import NewsletterStates from './containers/NewsletterStates';
 
 function App() {
   return (
     <div className="container">
-      <NewsletterForm />
+      <NewsletterStates />
     </div>
   );
 }
