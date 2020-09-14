@@ -20,19 +20,19 @@ export default function NewsletterStates() {
     <div>
       <h1>Opt-in for Newsletter</h1>
       <div>
-        <ToggleSwitch id="newsletter" value={newsletter} onSwitch={onNewsletterChange} />
+        <ToggleSwitch id="newsletter" checked={newsletter} onChange={onNewsletterChange} />
         <label htmlFor="newsletter">Send me Marketing Emails!</label>
       </div>
       <div>
-        <ToggleSwitch id="daily" small disabled={!newsletter} value={daily} onSwitch={setDaily} />
+        <ToggleSwitch id="daily" small disabled={!newsletter} checked={daily} onChange={setDaily} />
         <label htmlFor="daily">Daily Briefs</label>
       </div>
       <div>
-         <ToggleSwitch id="weekly" small disabled={!newsletter} value={weekly} onSwitch={setWeekly}/>
+         <ToggleSwitch id="weekly" small disabled={!newsletter} checked={weekly} onChange={setWeekly}/>
         <label htmlFor="weekly">Weekly Summary</label>
       </div>
       <div>
-        <ToggleSwitch id="monthly" small disabled={!newsletter} value={monthly} onSwitch={setMonthly}/>
+        <ToggleSwitch id="monthly" small disabled={!newsletter} checked={monthly} onChange={setMonthly}/>
         <label htmlFor="monthly">Monthly Digest</label>
       </div>
       <div>
